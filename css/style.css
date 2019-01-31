@@ -1,0 +1,94 @@
+.body{
+	margin: 0;
+	padding: 0;
+	background-color: #bbbbbb;
+}
+.banner{
+	width: 450px;
+	height: 200px;
+	border: 1px solid #bbbbbb;
+	margin: 100px auto;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.banner__title{
+	color: #4682B4;
+	font-family: "Arial", Calibri, sans-serif;
+	font-size: 22px;
+	transition: 1s;
+}
+.banner__text{
+	font-family: "Arial", Calibri, sans-serif;
+	font-size: 14px;
+	transition: 1s;
+	line-height: 1.5;
+}
+.banner__button{
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	background-color: #FFD700;
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+	border-bottom: 2px solid #FF8C00;
+	transition: 0.3s;
+}
+.banner__button:hover{
+	background-color: #FDEB22;
+}
+/*.banner::after{
+	content: '';
+	width: 80px;
+	height: 80px;
+	background: url("../image/comment.svg");
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+}*/
+.banner__comments-svg{
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	position: absolute;
+	right: 11px;
+	bottom: -10px;
+	transform: rotate(35grad);
+}
+.banner__hover{
+	transform: scale(0);
+	position: absolute;
+	bottom: -500px;
+	right: -500px;
+	width: 1000px;
+	height: 1000px;
+	background-color: #00BFFF;
+	border-radius: 50%;
+	transition: 1s;
+	z-index: -1;
+}
+.banner:hover > .banner__hover{
+	transform: scale(1);
+}
+.banner:hover > .banner__title{
+	color: #ffffff;
+}
+.banner:hover{
+	color: #ffffff;
+}
+.banner__comments-svg svg path{
+	transition: 1s;
+}
+.banner:hover > .banner__comments-svg svg path.banner__massage-1{
+	fill: #ffffff!important;
+}
+.banner:hover > .banner__comments-svg svg path.banner__massage-2{
+	fill: #00BFFF!important;
+	stroke: #ffffff!important;
+}
